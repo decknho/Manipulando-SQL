@@ -2,12 +2,12 @@ import pymysql
 conexao = pymysql.connect(
     host='localhost',
     user='root',
-    passwd=''
+    passwd='',
+    database='cadastro'
 )
 
 cursor = conexao.cursor()
-cursor.execute("SHOW DATABASES")
+cursor.execute("select * from gafanhotos")
 
 for x in cursor:
     print(x)
-    
